@@ -8,6 +8,8 @@ import org.springframework.stereotype.Component;
 import site.zxhy.amyadmin.config.JwtProps;
 
 import javax.crypto.SecretKey;
+import java.util.HashMap;
+import java.util.List;
 
 @RequiredArgsConstructor
 @Component
@@ -27,7 +29,10 @@ public class JwtUtil implements InitializingBean {
 
 
     // 生成JWT令牌
-    public String generateToken(String username) {
+    public String generateToken(String username, List<String> permissions) {
+
+        HashMap<Object, Object> claims = new HashMap<>();
+        claims.put("permissions", permissions);
 
         return null;
     }
