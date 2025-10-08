@@ -2,6 +2,11 @@ spring:
   application:
     name: amy-admin
 
+  servlet:
+    multipart:
+      max-file-size: 200MB
+      max-request-size: 250MB
+
 server:
   port: 8080
 
@@ -11,3 +16,6 @@ auth:
 
 jwt:
   secret: aXR4bWpmNHNqdWk4dzJ5dnViYW5oaGlxaHlyenNvdjVxY2U0dHNiY2V3aXBxaGFqMmtrZG1ybnpqc3lwYTRxYmdkNHB2bGg0dDlxMWF5ZjFwYmpydndyNm4yY2Ewc2JkdmtzYXdrM3VycXp3dWFweWh1bXhvYWxzbDJiMnhiZ3A=
+  header: Authorization
+  # 令牌前缀
+  token-start-with: Bearer
